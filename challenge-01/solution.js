@@ -2,7 +2,7 @@ export default function contarOvejas(ovejas) {
     // aquí tu magia
     const result = ovejas.filter(oveja => oveja.color == 'rojo' && oveja.name.toLowerCase().includes('n') & oveja.name.toLowerCase().includes('a'));
 
-    return result
+    return result;
 }
 
 const ovejas = [
