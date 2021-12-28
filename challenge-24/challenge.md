@@ -4,6 +4,7 @@ Vamos a hacer una función que nos diga si dos árboles de navidad son iguales. 
 
 Tenemos que ver si ambos árboles tienen la misma estructura y los mismos valores en todas las ramas. Aquí tienes unos ejemplos:
 
+```
 const tree = {
   value: 1,
   left: { value: 2, left: null, right: null },
@@ -20,5 +21,6 @@ const tree2 = {
 
 checkIsSameTree(tree, tree2) // false
 checkIsSameTree(tree2, tree2) // true
+```
 
-El cuñado 🦹‍♂️, que se las sabe todas, me ha dicho que tenga cuidado porque el truco del JSON.stringify puede no funcionar... ya que los árboles pueden ser el mismo pero el orden de representación de las ramas izquierda y derecha puede ser inversa... 
+El cuñado 🦹‍♂️, que se las sabe todas, me ha dicho que tenga cuidado porque **el truco del JSON.stringify puede no funcionar...** ya que los árboles pueden ser el mismo pero el orden de representación de las ramas izquierda y derecha puede ser inversa... 
