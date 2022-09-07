@@ -15,7 +15,7 @@ export default function getMinJump(obstacles) {
 }
 
 
-const obstacles = [5, 3, 6, 7, 9]
+let obstacles = [5, 3, 6, 7, 9]
 getMinJump(obstacles) // -> 4
 
 // S es salto, X es obstáculo
@@ -25,8 +25,8 @@ getMinJump(obstacles) // -> 4
 S-----------S-----------S-------
 */
 
-const obstacles = [2, 4, 6, 8, 10]
-getMinJump(obstacles) // -> 7
+const obstacles1 = [2, 4, 6, 8, 10]
+getMinJump(obstacles1) // -> 7
 
 /* Así quedaría la representación:
 0, 1, 2, 3, 4, 5, 6, 7, 8, 9, 10
