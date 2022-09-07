@@ -1,15 +1,14 @@
-function checkIsSameTree(treeA, treeB) {
+export default function checkIsSameTree(treeA, treeB) {
     // ¡No olvides compartir tu solución en redes!
-    if(treeA.value != treeB.value){
+    if (!treeA && !treeB) {
+        return true;
+    }
+    else if (!treeA || !treeB) {
         return false;
     }
-    else if(treeA.left && treeB.left){
-        return checkIsSameTree(treeA.left, treeB.left);
+    else {
+        return treeA.value == treeB.value && checkIsSameTree(treeA.left, treeB.left) && checkIsSameTree(treeA.right, treeB.right);
     }
-    else if(treeA.right && treeB.right){
-        return checkIsSameTree(treeA.right, treeB.right);
-    }
-    return true;
 }
 
 const tree = {
@@ -18,7 +17,7 @@ const tree = {
     right: { value: 3, left: null, right: null }
 }
 
-console.log(checkIsSameTree(tree, tree)) // true
+checkIsSameTree(tree, tree) // true
 
 const tree2 = {
     value: 1,
@@ -26,5 +25,5 @@ const tree2 = {
     right: { value: 5, left: null, right: { value: 4, left: null, right: null } }
 }
 
-console.log(checkIsSameTree(tree, tree2)) // false
-console.log(checkIsSameTree(tree2, tree2)) // true
+checkIsSameTree(tree, tree2) // false
+checkIsSameTree(tree2, tree2) // true

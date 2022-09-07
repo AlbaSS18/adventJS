@@ -4,6 +4,7 @@ Necesitamos una función que pasándole un árbol binario nos diga el número de
 
 Lo mejor es que veamos un ejemplo:
 
+```
 // tenemos el árbol en forma de objeto
 const tree = {
   value: 1, // el nodo raíz siempre es uno, porque es la estrella ⭐
@@ -70,5 +71,6 @@ const bigTree = {
 */
 
 countDecorations(bigTree) // 28
+```
 
 Por cierto, Bellf Gates me ha contado que este tipo de ejercicio es muy típico en las entrevistas de trabajo para programadores. ¿Lo sabías?

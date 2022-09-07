@@ -1,17 +1,17 @@
 export default function learn(time, courses) {
-  // ¡No olvides compartir tu solución en redes!
-  let betterComboPos = null;
-  let betterSuma = 0;
-  for (var i = 0; i < courses.length; i++) {
-    for (var j = i + 1; j < courses.length; j++) {
-      let suma = courses[i] + courses[j];
-      if (suma <= time && suma > betterSuma) {
-        betterComboPos = [i, j];
-        betterSuma = suma;
-      }
+    // ¡No olvides compartir tu solución en redes!
+    let betterComboPos = null;
+    let betterSuma = 0;
+    for (var i = 0; i < courses.length; i++) {
+        for (var j = i + 1; j < courses.length; j++) {
+            let suma = courses[i] + courses[j];
+            if (suma <= time && suma > betterSuma) {
+                betterComboPos = [i, j];
+                betterSuma = suma;
+            }
+        }
     }
-  }
-  return betterComboPos;
+    return betterComboPos;
 }
 
 learn(10, [2, 3, 8, 1, 4]) // [0, 2] -> con 10 horas disponibles lo mejor es que completemos los cursos en el índice 0 y 2.
